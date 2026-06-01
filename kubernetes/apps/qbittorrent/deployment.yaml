@@ -19,15 +19,15 @@ spec:
 
     spec:
       containers:
-      - name: qbittorent
-        image: lscr.io=linuxserver/qbittorrent:latest
+      - name: qbittorrent
+        image: lscr.io/linuxserver/qbittorrent:latest
 
         ports:
          - containerPort: 8080
 
         volumeMounts:
         - name: media
-          volumePath: /media
+          mountPath: /media
 
       volumes:
       - name: media

@@ -11,7 +11,7 @@ spec:
   source:
     repoURL: https://github.com/tbalazs3/media-server.git
     targetRevision: HEAD
-    path: kubernetes/apps/qbittorent
+    path: kubernetes/apps/qbittorrent
 
   destination:
     server: https://kubernetes.default.svc
