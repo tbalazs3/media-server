@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: qbittorrent
+  namespace: media
+
+spec:
+  replicas: 1
+
+  selector:
+    matchLabels:
+      app: qbittorrent
+
+  template:
+    metadata:
+      labels:
+        app: qbittorrent
+
+    spec:
+      containers:
+      - name: qbittorent
+        image: lscr.io=linuxserver/qbittorrent:latest
+
+        ports:
+         - containerPort: 8080
+
+        volumeMounts:
+        - name: media
+          volumePath: /media
+
+      volumes:
+      - name: media
+        hostPath:
+          path: /home/balazs/media
