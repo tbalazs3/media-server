@@ -28,3 +28,6 @@ spec:
         hostPath:
           path: /home/balazs/media
 
+      - name: config
+        hostPath:
+          path: /home/balazs/appdata/jellyfin
