@@ -28,8 +28,13 @@ spec:
         volumeMounts:
         - name: media
           mountPath: /media
+        - name: config
+          mountPath: /config
 
       volumes:
       - name: media
         hostPath:
           path: /home/balazs/media
+      - name: config
+        hostPath:
+          path: /home/balazs/appdata/qbittorrent
