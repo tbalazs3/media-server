@@ -18,6 +18,10 @@ spec:
         app: qbittorrent
 
     spec:
+      hostAliases:
+        - ip: "2.59.170.197"
+          hostnames:
+            - "t.ncore.pro"
       containers:
       - name: qbittorrent
         image: lscr.io/linuxserver/qbittorrent:latest
