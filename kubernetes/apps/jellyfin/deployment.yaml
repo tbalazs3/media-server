@@ -32,3 +32,6 @@ spec:
       - name: config
         hostPath:
           path: /home/balazs/appdata/jellyfin
+      securityContext:
+        runAsUser: 1000
+        wrunAsGroup: 1000
