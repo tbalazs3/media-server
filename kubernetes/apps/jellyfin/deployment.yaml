@@ -24,6 +24,8 @@ spec:
           mountPath: /media
         - name: config
           mountPath: /config
+        - name: dri
+          mountPath: /dev/dri
 
       volumes:
       - name: media
@@ -32,6 +34,12 @@ spec:
       - name: config
         hostPath:
           path: /home/balazs/appdata/jellyfin
+      - name: dri
+        hostPath:
+          path: /dev/dri
+          type: Directory
       securityContext:
         runAsUser: 1000
         runAsGroup: 1000
+        supplementalGroups:
+          - 990
